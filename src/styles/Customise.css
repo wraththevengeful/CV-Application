@@ -1,12 +1,15 @@
 /* inner squares */
+body {
+    background-color: #F3F4F6;
+}
 
-#squareContainer{
+#squareContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#outersquareDiv{
+#outersquareDiv {
     display: flex;
     flex-direction: row;
     height: 2.5rem;
@@ -16,30 +19,86 @@
     margin: 1rem;
 }
 
-#coloredDiv, #nonColoredDiv{
+#coloredDiv,
+#nonColoredDiv {
     height: 100%;
     width: 50%;
 }
 
-#mainsquareDiv.top{
+#mainsquareDiv.top {
     transform: rotate(90deg);
 }
 
-#mainsquareDiv.top{
+#mainsquareDiv.top {
     transform: rotate(180deg);
 }
 
-#mainsquareDiv.left{
+#mainsquareDiv.left {
     transform: rotate(0);
 }
 
 /* Layout editor */
-#layoutEditor{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#layoutEditor {
+    
 }
 
-#layoutButtons{
+#layoutButtons {
     display: flex;
+}
+
+/* Color Picker */
+#colorPickerMain {
+
+}
+
+input[type="color"] {
+    border: 1px solid #888;
+    box-shadow: none;
+    padding: 0;
+    margin: 1px 0 0 1rem;
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+#accentColor {
+    display: flex;
+}
+
+/* Font selection */
+
+#fontBoxes {
+    display: flex;
+
+}
+
+.fontBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fontDisplay {
+    margin: 1rem 2rem 0 0;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #444;
+    font-size: 1.75rem;
+    border-radius: 5px;
+}
+
+/* COMMOMN CSS */
+.menuBox {
+    background-color: white;
+    border: 1px solid #99999966;
+    margin: 1rem;
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
