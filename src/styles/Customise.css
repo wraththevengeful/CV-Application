@@ -1,0 +1,45 @@
+/* inner squares */
+
+#squareContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#outersquareDiv{
+    display: flex;
+    flex-direction: row;
+    height: 2.5rem;
+    width: 2.5rem;
+    border: 1px solid black;
+    border-radius: 10%;
+    margin: 1rem;
+}
+
+#coloredDiv, #nonColoredDiv{
+    height: 100%;
+    width: 50%;
+}
+
+#mainsquareDiv.top{
+    transform: rotate(90deg);
+}
+
+#mainsquareDiv.top{
+    transform: rotate(180deg);
+}
+
+#mainsquareDiv.left{
+    transform: rotate(0);
+}
+
+/* Layout editor */
+#layoutEditor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#layoutButtons{
+    display: flex;
+}
