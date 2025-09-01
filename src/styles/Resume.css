@@ -1,0 +1,16 @@
+.contactDetails{
+    display: flex;
+}
+
+.email, .phone, .location{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 2rem;
+}
+
+.email img, .phone img, .location img{
+    height: 1.5rem;
+    width: auto;
+    margin-right: 10px;
+}
