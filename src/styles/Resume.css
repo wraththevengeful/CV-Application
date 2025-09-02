@@ -1,15 +1,32 @@
-.contactDetails{
-    display: flex;
+#resumeMainFrame {
+    box-shadow: 0 13px 27px -5px rgba(50,50,93,.1),0 8px 16px -8px rgba(0,0,0,.25);
+    width: 21cm;
+    height: 29.7cm;
 }
 
-.email, .phone, .location{
+#resumeTopLevel{
+    text-align: center;
+    /* background-color: red; */
+    padding: 1rem;
+}
+
+.contactDetails {
+    display: flex;
+    justify-content: center;
+}
+
+.email,
+.phone,
+.location {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-right: 2rem;
 }
 
-.email img, .phone img, .location img{
+.email svg,
+.phone svg,
+.location svg {
     height: 1.5rem;
     width: auto;
     margin-right: 10px;

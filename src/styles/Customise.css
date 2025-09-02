@@ -37,18 +37,8 @@ body {
     transform: rotate(0);
 }
 
-/* Layout editor */
-#layoutEditor {
-    
-}
-
 #layoutButtons {
     display: flex;
-}
-
-/* Color Picker */
-#colorPickerMain {
-
 }
 
 input[type="color"] {
@@ -61,7 +51,7 @@ input[type="color"] {
     width: 2.5rem;
 }
 
-#accentColor {
+.accentColors {
     display: flex;
 }
 
@@ -72,7 +62,7 @@ input[type="color"] {
 
 }
 
-.fontBox{
+.fontBox {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -102,3 +92,4 @@ input[type="color"] {
     justify-content: center;
     align-items: flex-start;
 }
+

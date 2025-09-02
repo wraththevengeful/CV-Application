@@ -1,5 +1,5 @@
 import "../styles/Customise.css"
-import { useState } from "react"
+// import { useState } from "react"
 
 
 function Square({ position = "left", initialColor }) {
@@ -16,26 +16,17 @@ function Square({ position = "left", initialColor }) {
     )
 }
 
-function ColorPicker({ initialColor, changeColor }) {
+function ColorPicker({ initialPrimaryColor, changePrimaryColor, initialSecondaryColor, changeSecondaryColor }) {
     return (
         <div id="colorPickerMain" className="menuBox">
             <h2>Colors</h2>
-            <div id="accentColor">
-                <p>Accent Color</p>
-                <input type="color" value={initialColor} onChange={(e) => changeColor(e.target.value)} />
+            <div className="accentColors">
+                <p>Primary Color</p>
+                <input type="color" value={initialPrimaryColor} onChange={(e) => changePrimaryColor(e.target.value)} />
             </div>
-        </div>
-    )
-}
-
-function Layout({ initialColor }) {
-    return (
-        <div id="layoutEditor" className="menuBox">
-            <h2>Layout</h2>
-            <div id="layoutButtons">
-                <Square position="top" initialColor={initialColor} />
-                <Square position="left" initialColor={initialColor} />
-                <Square position="right" initialColor={initialColor} />
+            <div className="accentColors">
+                <p>Secondary Color</p>
+                <input type="color" value={initialSecondaryColor} onChange={(e) => changeSecondaryColor(e.target.value)} />
             </div>
         </div>
     )
@@ -60,12 +51,10 @@ function FontSelection() {
     )
 }
 
-function CustomiseWindow() {
-    const [initialColor, changeColor] = useState("#0000ff");
+function CustomiseWindow({ initialPrimaryColor, changePrimaryColor, initialSecondaryColor, changeSecondaryColor }) {
     return (
-        <div id="CustomiseWindow">
-            <Layout initialColor={initialColor} />
-            <ColorPicker initialColor={initialColor} changeColor={changeColor} />
+        <div id="CustomiseWindow" className="extendableDialog">
+            <ColorPicker initialPrimaryColor={initialPrimaryColor} changePrimaryColor={changePrimaryColor} initialSecondaryColor={initialSecondaryColor} changeSecondaryColor={changeSecondaryColor} />
             <FontSelection />
         </div>
     )
