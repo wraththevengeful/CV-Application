@@ -1,0 +1,28 @@
+.inputForms {
+    background-color: white;
+    margin: 1rem;
+    max-height: fit-content;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid #99999960;
+}
+
+.inputForms input {
+    border: none;
+    background-color: #99999917;
+    border-radius: 15px;
+    height: 0.75rem;
+    font-size: .75rem;
+    width: 30rem;
+    padding: 1rem;
+    margin: 10px 0 10px 0;
+}
+
+.inputForms label {
+    font-weight: bold;
+    margin-bottom: 100px;
+}
+
+.inputForms h2 {
+    margin-top:0 ;
+}

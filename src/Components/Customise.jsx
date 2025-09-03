@@ -32,16 +32,16 @@ function ColorPicker({ initialPrimaryColor, changePrimaryColor, initialSecondary
     )
 }
 
-function FontSelection() {
+function FontSelection({handleFontChange}) {
     const fonts = ['sans', 'serif', 'monospace'];
     return (
         <div className="menuBox">
             <h2>Fonts</h2>
             <div id="fontBoxes">
                 {fonts.map((font) =>
-                    <div className="fontBox">
-                        <div className="fontDisplay">
-                            <p key={font} style={{ fontFamily: font }}>Aa</p>
+                    <div className="fontBox" key={font} onClick={()=>handleFontChange(font)}>
+                        <div className={`fontDisplay `}>
+                            <p style={{ fontFamily: font }}>Aa</p>
                         </div>
                         <p key={font} style={{ fontFamily: font, fontSize: "1rem" }}>{font}</p>
                     </div>
@@ -51,11 +51,11 @@ function FontSelection() {
     )
 }
 
-function CustomiseWindow({ initialPrimaryColor, changePrimaryColor, initialSecondaryColor, changeSecondaryColor }) {
+function CustomiseWindow({ initialPrimaryColor, changePrimaryColor, initialSecondaryColor, changeSecondaryColor, handleFontChange }) {
     return (
         <div id="CustomiseWindow" className="extendableDialog">
             <ColorPicker initialPrimaryColor={initialPrimaryColor} changePrimaryColor={changePrimaryColor} initialSecondaryColor={initialSecondaryColor} changeSecondaryColor={changeSecondaryColor} />
-            <FontSelection />
+            <FontSelection handleFontChange={handleFontChange} />
         </div>
     )
 }
