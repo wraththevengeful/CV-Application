@@ -66,6 +66,26 @@ function EducationSection({ entries }) {
     )
 }
 
+function WorkExpSection({ entries }) {
+    console.log(entries)
+    return (
+        entries.map((entry, index) => {
+            return (
+                < div className="educationEntry" key={index}>
+                    <div>
+                        <h3>{entry.workName}</h3>
+                        <p>{entry.yearOfJoining}</p>
+                    </div>
+                    <div>
+                        <p>{entry.companyName}</p>
+                        <p>{entry.yourExp}</p>
+                    </div>
+                </div >
+            )
+        })
+    )
+}
+
 // function EducationDetails({ courseName = "MCA", schoolName = "Anna University, Chennai", yearOfGrad = "2025", CGPA = "7.5" }) {
 //     return (
 //         <div>
@@ -74,12 +94,14 @@ function EducationSection({ entries }) {
 //     )
 // }
 
-function Resume({ colorProps, fontFamily, sectionName, detailsProps, educationEntries }) {
+function Resume({ colorProps, fontFamily, detailsProps, educationEntries, workEntries }) {
     return (
         <div id='resumeMainFrame' style={{ fontFamily: fontFamily }}>
             <TopLevel colorProps={colorProps} detailsProps={detailsProps} />
-            <SectionHeader sectionName={sectionName} colorProps={colorProps} />
+            <SectionHeader sectionName={"Education"} colorProps={colorProps} />
             <EducationSection entries={educationEntries} />
+            <SectionHeader sectionName={"Work Experience"} colorProps={colorProps} />
+            <WorkExpSection entries={workEntries}/>
         </div>
     )
 }
