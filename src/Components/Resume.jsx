@@ -47,6 +47,25 @@ function SectionHeader({ sectionName = "NoName", colorProps }) {
     )
 }
 
+function EducationSection({ entries }) {
+    return (
+        entries.map((entry, index) => {
+            return (
+                < div className="educationEntry" key={index}>
+                    <div>
+                        <h3>{entry.courseName}</h3>
+                        <p>{entry.CGPA}</p>
+                    </div>
+                    <div>
+                        <p>{entry.schoolName}</p>
+                        <p>{entry.yearOfGrad}</p>
+                    </div>
+                </div >
+            )
+        })
+    )
+}
+
 // function EducationDetails({ courseName = "MCA", schoolName = "Anna University, Chennai", yearOfGrad = "2025", CGPA = "7.5" }) {
 //     return (
 //         <div>
@@ -55,11 +74,12 @@ function SectionHeader({ sectionName = "NoName", colorProps }) {
 //     )
 // }
 
-function Resume({ colorProps, fontFamily, sectionName, detailsProps }) {
+function Resume({ colorProps, fontFamily, sectionName, detailsProps, educationEntries }) {
     return (
         <div id='resumeMainFrame' style={{ fontFamily: fontFamily }}>
             <TopLevel colorProps={colorProps} detailsProps={detailsProps} />
             <SectionHeader sectionName={sectionName} colorProps={colorProps} />
+            <EducationSection entries={educationEntries} />
         </div>
     )
 }

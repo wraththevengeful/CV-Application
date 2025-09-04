@@ -1,3 +1,8 @@
+h3{
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
 .inputForms {
     background-color: white;
     margin: 1rem;
@@ -25,4 +30,28 @@
 
 .inputForms h2 {
     margin-top:0 ;
+}
+
+.foldable {
+    background-color: white;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.foldable img{
+    width: 20px;
+    height: auto;
+    margin-right: 20px;
+    
+}
+
+.mainFoldableButtons{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hiddenFormParts{
+    display: none;
 }

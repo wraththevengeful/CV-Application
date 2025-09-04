@@ -2,3 +2,7 @@
     display: flex;
     padding: 0 5rem 0 5rem;
 }
+
+.inputsInApp{
+    max-width: 40rem;
+}
